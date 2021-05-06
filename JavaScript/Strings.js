@@ -81,3 +81,76 @@ function splitPairs(input) {
     }
     return resultPair;
 }
+
+function findMinLengthOfThreeWords(word1, word2, word3) {
+    let array = [word1, word2, word3];
+    let minLength = word1.length; 
+    
+    for (let i = 1; i < array.length; i++) {
+       if (array[i].length < minLength) {
+           minLength = array[i].length;
+       }
+    }
+    return minLength;
+  }
+
+
+  function findMaxLengthOfThreeWords(word1, word2, word3) {
+    let array = [word1, word2, word3];
+    let maxLength = word1.length;
+    
+    for (let i = 1; i < array.length; i++) {
+        if (array[i].length > maxLength) {
+            maxLength = array[i].length;
+        }
+    }
+    return maxLength;
+  }
+
+  function getLongestOfThreeWords(word1, word2, word3) {
+  //If there is a tie, it should return the first word in the tie.
+
+    let words = [word1, word2, word3];
+     let longest = words[0];
+     
+     for ( let i = 1; i < words.length; i++) {
+         if ( words[i].length > longest.length ) {
+             longest = words[i];
+         }
+     }
+     return longest; 
+   }
+
+   function findShortestOfThreeWords(word1, word2, word3) {
+    let words = [word1, word2, word3];
+    let shortest = words[0];
+    
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length < shortest.length) {
+            shortest = words[i];
+        }
+    }
+    return shortest; 
+  }
+  word1 = "car"
+  word2 = "restaurant"
+  word3 = "mouse"
+  
+  function findShortestOfThreeWords(word1, word2, word3) {
+      if (word1.length < word2.length && word1.length < word3.length) {
+          return word1
+      } else if (word2.length < word1.length && word2.length < word3.length) {
+          return word2
+      } else {
+          return word3
+      }
+  }
+
+  function verify(i){
+      console.log(i)
+  }
+results = findShortestOfThreeWords(word1, word2, word3)
+// let output = findShortestOfThreeWords('a', 'two', 'three');
+//console.log(output); --> 'a'
+
+
