@@ -1,2 +1,2 @@
 # Algo-Diary📚
-- A collection of algorithms and data structures
+- A collection of JavaScript algorithms and terms
