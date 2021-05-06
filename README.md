@@ -1,2 +1,2 @@
-# Algo-Diary
-A collection of algorithms and data structures
+# 🖥️ Algo-Diary 🤓
+- A collection of algorithms and data structures
