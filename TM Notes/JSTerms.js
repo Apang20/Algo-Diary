@@ -1,188 +1,31 @@
 
-/*1- REVERSE A STRING WITHOUT USING THE REVERSE METHOD
 
-PSUEDO CODE: 
-//Input - string 
-//Output - reverse of input
-// EC - do not use .reverse() method
-// declare a function with string input and empty string var
-// use a for loop iterate over the string, decrement
-//push to the new string (empty var) and return */ 
-
-function reverseStr(string){
-	let result = "";
-	
-	for ( let i = string.length-1; i >= 0; i-- ){
-		result += string[i];
-	}
-	return result
-}
-
-str = "racecar"
-
-str[0] === str[6]
-str[1] === str[5]
-str[2] === str[4]
-
-str[3] === str[3]
-str[4] === str[2]
-str[5] === str[1]
-str[6] === str[0] 
-
-
-/*
-2- FIND OUT IF GIVEN WORD IS A PALINDROME: 
-	BONUS: do the same for sentences. ie "A Man, A Plan, A Canal, Panama!" */
-
-function isPalindrome(string){
-	for (let i =0; i < string.length / 2; i++){
-		if (string[i] !== string[length - 1 - i]){
-			return false
-		} 
-	}
-	return true; 
-}
+/************    INTERVIEWER: antoniotari11@gmail.com     *****************
+ 
 
 
 
-/*
-3- GIVEN AN ARRAY OF INTEGERS FIND THE MOST REPEATED NUMBER: 
-	ie. findMostRepeated([3,3,3,4,4,4,4,6,6,6,1,1,4,4,1,1,1,1,1,1,4,4,4,4,3,4,4,4]) = 4 */
 
-    function maxChar(str) {
-        const charMap = {};
-        let max = 0;
-        let maxChar = '';
-    
-        for (let char of str) {
-            if (charMap[char]) {
-                charMap[char]++
-            } else {
-                charMap[char] = 1
-            }
-        }
-    
-        for (let char in CharMap) { //key(leters)
-            if (charMap[char] > max) { //value(integers)
-                max = charMap[char];
-                maxChar = char;
-            }
-        }
-        return maxChar;
-    }
+--------------------------  ALGO PRACTICE  ---------------------------------
 
-/*
-4- GIVEN AN ARRAY OF INTEGER FIND THE LONGEST SEQUENCE OF THE SAME NUMBER
-   AND RETURN THE NUMBER (NOT THE NUMBER OF REPTITIONS)
-	ie. findMostRepeated([3,3,3,4,4,4,4,6,6,6,1,1,4,4,1,1,1,1,1,1,4,4,4,4,3,4,4,4]) = 1 
-
-PSUEDO CODE: 
-//Find longest sequence of the same number
-//Input - an array of integers
-//Output - one integer (max occurance)
-//create an obj variable 
-//iterate over theh array -> obj 
-//iterate over the obj to return max integer
-
-
-
-arr = [3,3,3,4,4,4,4,3,3,6,6,6,1,1,4,4,1,1,1,1,1,1,4,4,4,4,3,4,4,4]
-currentLongest = 2;
-currentNum = 3;
-arr[i] = 3
-
-numMap = {
-	3: 3,
-	4: 4,
-}
-
-*/
-
-function maxInt(arr){
-	return findLongerKey(generateMap(arr))
-}
-
-
-function maxInt(arr){
-	const numMap = {};
-	let max = 0; 
-	let maxNum = 0; 
-	let currentLongest;
-	let currentNum;
-
-	for (let num of arr){
-		if (currentNum !== num) {
-			currentNum = num
-			currentLongest = 1
-		} else {
-			++currentLongest
-		}
-
-		if(numMap[num]) {
-			if (currentLongest > numMap[num]) {
-				numMap[num] = currentLongest
-			}
-			
-		} else {
-			numMap[num] = 1
-		}
-	}
-
-	for ( let num in numMap) {
-		if(numMap[num] > max){ 
-			max = numMap[num];
-			maxNum = num;
-		}
-	}
-	return maxNum; 
-}
-
-console.log(maxInt([3,3,3,4,4,4,4,3,3,6,6,6,6,6,6,6,1,1,4,4,1,1,1,1,1,1,4,4,4,4,3,4,4,4]))
-
-
-function create() {
-	let counter = 0
-	return {
-		increment: function() {
-        	counter++
-    	},
-  
-    	print: function() {
-        	console.log(counter)
-    	}
-	}
-}
-let c = create()
-c.increment()
-c.print()  
-
-
-/*
-5 - FROM AN UNSORTED ARRAY, CHECK WHETHER THERE ARE ANY TWO NUMBERS 
+FROM AN UNSORTED ARRAY, CHECK WHETHER THERE ARE ANY TWO NUMBERS 
     THAT WILL SUM UP TO THE TOTAL 
 	sumFinder([6,4,3,2,1,7], 2) = false
 	sumFinder([0,4,3,2,1,7], 9) = true 8 */
 
 
-
-
-
 /*
-6 - COUNT TOTAL NUMBER OF ZEROS FROM 1 UP TO n
+COUNT TOTAL NUMBER OF ZEROS FROM 1 UP TO n
 	countZero(2014) = 223
 	countZero(100) = 11 */
 
-
-
-
-
-
-
  /*   
-INTERVIEWER: antoniotari11@gmail.com
 
 
-Class Inheritance: 
+
+---------------------------  JS/REACT TERMS  --------------------------------
+
+CLASS INHERITANCE:
 instances inherit from classes (like a blueprint — a description of the class), and create sub-class relationships: hierarchical class taxonomies. Instances are typically instantiated via constructor functions with the `new` keyword. Class inheritance may or may not use the `class` keyword from ES6.
 Prototypal Inheritance: 
 instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.
@@ -191,15 +34,18 @@ In JavaScript, prototypal inheritance is simpler & more flexible than class inhe
 https://www.w3schools.com/js/js_object_prototypes.asp
 
 
+
 JS FUNDAMENTAL CONCEPTS : SCOPE, HOISTING, CLOSURES, CALLBACKS, PROMISES, Event Loop, Prototypes
 https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
 https://medium.com/javascript-scene/the-two-pillars-of-javascript-pt-2-functional-programming-a63aa53a41a4
+
 
 
 COMPOSITION
 https://youtu.be/wfMtDGfHWpA
 https://alligator.io/js/class-composition/
 https://ui.dev/javascript-inheritance-vs-composition/
+
 
 
 DESIGN PATTERNS
@@ -216,7 +62,8 @@ The Gorilla/banana problem
 https://youtu.be/lKCCZTUx0sI
 
 
-Concatenative inheritance: 
+
+CONCATENATIVE INHERITANCE:
 The process of inheriting features directly from one object to another by copying the source objects properties. In JavaScript, source prototypes are commonly referred to as mixins. Since ES6, this feature has a convenience utility in JavaScript called `Object.assign()`. Prior to ES6, this was commonly done with Underscore/Lodash’s `.extend()` jQuery’s `$.extend()`, and so on… The composition example above uses concatenative inheritance.
 Prototype delegation: 
 In JavaScript, an object may have a link to a prototype for delegation. If a property is not found on the object, the lookup is delegated to the delegate prototype, which may have a link to its own delegate prototype, and so on up the chain until you arrive at `Object.prototype`, which is the root delegate. This is the prototype that gets hooked up when you attach to a `Constructor.prototype` and instantiate with `new`. You can also use `Object.create()` for this purpose, and even mix this technique with concatenation in order to flatten multiple prototypes to a single delegate, or extend the object instance after creation.
@@ -227,14 +74,19 @@ When most people think of prototypal OO in JavaScript, they think of prototype d
 prototype chain image: https://miro.medium.com/max/2400/1*Lu-BaawSayDz1itKPk2u4w.png
 
 
+
 ONE WAY DATA FLOW
 One way data flow means that the model is the single source of truth. Changes in the UI trigger messages that signal user intent to the model (or “store” in React). Only the model has the access to change the app’s state. The effect is that data always flows in a single direction, which makes it easier to understand.
 One way data flows are deterministic, whereas two-way binding can cause side-effects which are harder to follow and understand.
+
+
 
 STATE
 States are the heart of React components. States are the source of data and must be kept as simple as possible. 
 Basically, states are the objects which determine components rendering and behavior. 
 They are mutable unlike the props and create dynamic and interactive components.
+
+
 
 PROPS
 Props is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. 
@@ -252,6 +104,7 @@ Unmounting Phase:
 This is the final phase of a component’s life cycle in which the component is destroyed and removed from the DOM.
  
 
+
 LIFECYCLE METHODS
 componentWillMount() – Executed just before rendering takes place both on the client as well as server-side.
 componentDidMount() – Executed on the client side only after the first render.
@@ -262,7 +115,8 @@ componentDidUpdate() – Called immediately after rendering takes place.
 componentWillUnmount() – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
 
 
-Higher Order Components(HOC)
+
+HIGHER ORDER COMPONENTS (HOC)
 Higher Order Component is an advanced way of reusing the component logic. 
 Basically, it’s a pattern that is derived from React’s compositional nature. HOC are custom components which wrap another component within it. 
 They can accept any dynamically provided child component but they won’t modify or copy any behavior from their input components. 
@@ -274,7 +128,10 @@ Render High jacking
 State abstraction and manipulation
 Props manipulation
 
-What are Pure Components
+
+
+
+PURE COMPONENTS:
 Pure components are the simplest and fastest components which can be written. 
 They can replace any component which only has a render(). 
 These components enhance the simplicity of the code and performance of the application.
