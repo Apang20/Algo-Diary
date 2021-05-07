@@ -170,3 +170,18 @@ function countNumOfStrings(arr){
     }
     return count; 
   }
+
+
+  function listLengthOfAllWords(words){
+    //input - array 
+    //output - array
+    //create a result array
+    //iterate over the array
+    //push result array and return
+    
+    let num = [];
+    for (let i = 0; i < words.length; i++) {
+        num.push(words[i].length);
+    }
+    return num; 
+  }
