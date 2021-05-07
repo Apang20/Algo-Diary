@@ -185,3 +185,52 @@ function countNumOfStrings(arr){
     }
     return num; 
   }
+
+
+
+  /*Write a function tallEnoughToRide which takes 
+  in an array of people objects, and returns an array of names 
+  of people who are greater than or equal to 48 inches in height.
+
+You can assume an input which looks like this:
+const group = [
+  {
+    name: "Mia",
+    age: 10,
+    heightInInches: 52
+  },
+  {
+    name: "Jaya",
+    age: 9,
+    heightInInches: 45
+  },
+  {
+    name: "Kiana",
+    age: 10,
+    heightInInches: 55
+  },
+  {
+    name: "Alex",
+    age: 11,
+    heightInInches: 48
+  }
+]
+
+Calling your function should result in:
+tallEnoughToRide(group); ["Mia", "Kiana", "Alex"];
+ */
+
+function tallEnoughToRide(group) {
+    //input is array of people objs
+    //output is array of tall peoples' names
+    //result array
+    //iterate over the group
+    //return result
+    var tallPeople = [];
+    for (var i = 0; i < group.length; i++) {
+        if (group[i].heightInInches >= 48) {
+            tallPeople.push(group[i].name)
+        }
+    }
+    return tallPeople;
+  }
