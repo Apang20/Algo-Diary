@@ -154,3 +154,19 @@ results = findShortestOfThreeWords(word1, word2, word3)
 //console.log(output); --> 'a'
 
 
+function countNumOfStrings(arr){
+    //input -array of mixed elements
+    //output - num
+    //create count var
+    //iterate over the arr
+    //check if string/ count 
+    //return result
+    
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if(typeof arr[i] === "string") {
+            count++
+        }
+    }
+    return count; 
+  }
