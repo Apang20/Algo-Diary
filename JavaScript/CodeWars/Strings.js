@@ -226,11 +226,23 @@ function tallEnoughToRide(group) {
     //result array
     //iterate over the group
     //return result
-    var tallPeople = [];
-    for (var i = 0; i < group.length; i++) {
+    let tallPeople = [];
+    for (let i = 0; i < group.length; i++) {
         if (group[i].heightInInches >= 48) {
             tallPeople.push(group[i].name)
         }
     }
     return tallPeople;
+  }
+
+  function tallestPerson(group) {
+    let tallest = group[0];
+    for (let i = 1; i < group.length; i++) {
+        if (tallest.heightInInches < group[i].heightInInches) {
+            tallest = group[i];
+        }
+    }
+  
+  
+  return tallest.name + ' at ' + tallest.heightInInches + ' inches';
   }
