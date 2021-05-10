@@ -189,5 +189,26 @@ function shoppingSummary(list) {
       }
   }
   return "I got " + items + " items at $" + price;
-  
 }
+
+
+function removeMostExpensive(list) {
+  //input - array of grocery items
+  //ouput - a new array without the most expensive itemvar expensiveItem = list[0];
+  var budgetList = [];
+  var expItem = list[0];
+  
+  for (var i = 0; i < list.length; i++) {
+      if (list[i].price > expItem.price) {
+          expItem = list[i];
+      }
+  }
+      for (var j = 0; j < list.length; j++) {
+          if (list[j] !== expItem) {
+              budgetList.push(list[j]);
+          }
+      
+  }
+  return budgetList;
+  }
+  
