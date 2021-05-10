@@ -179,10 +179,10 @@ var shoppingList = [
 function shoppingSummary(list) {
   //input - array of obj
   //output - string
-  var items = 0;
-  var price = 0; 
+  let items = 0;
+  let price = 0; 
   
-  for (var i = 0; i < list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
       if (price + list[i].price < 100) {
           items++
           price+= list[i].price;
@@ -195,15 +195,15 @@ function shoppingSummary(list) {
 function removeMostExpensive(list) {
   //input - array of grocery items
   //ouput - a new array without the most expensive itemvar expensiveItem = list[0];
-  var budgetList = [];
-  var expItem = list[0];
+  let budgetList = [];
+  let expItem = list[0];
   
-  for (var i = 0; i < list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
       if (list[i].price > expItem.price) {
           expItem = list[i];
       }
   }
-      for (var j = 0; j < list.length; j++) {
+      for (let j = 0; j < list.length; j++) {
           if (list[j] !== expItem) {
               budgetList.push(list[j]);
           }
