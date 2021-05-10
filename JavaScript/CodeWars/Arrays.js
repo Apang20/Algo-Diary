@@ -128,3 +128,66 @@ function transformArrayToObject(array) {
       console.log ('FAILED [' + testName + '] Expected "' + expected + '", but got "' + actual + '"');
   }
  }
+
+
+/*Write a function shoppingSummary which accepts an array of 
+shopping items (objects), and returns a string with the number 
+of items you bought, and the total amount you spent.
+
+-You cannot spend more than your budget ($100).
+-You have enough room for all the items (if you end up buying everything), 
+so there's no item limit -- your only limit is your budget.
+-The list is mentioned to be in "decreasing priority" simply because you 
+do not have to sort the input array to optimize for anything else. 
+-So do not worry about coming up with any other sorting algorithm for 
+the most "bang for your buck" 
+
+var shoppingList = [
+  {
+    item: "rice",
+    price: 12.75,
+    weightInPounds: 20
+  },
+  {
+    item: "chicken",
+    price: 6.99,
+    weightInPounds: 1.25
+  },
+  {
+    item: "cookware",
+    price: 79.99,
+    weightInPounds: 35
+  },
+  {
+    item: "celery",
+    price: 3.99,
+    weightInPounds: 2
+  },
+  {
+    item: "carrots",
+    price: 2.85,
+    weightInPounds: 2
+  },
+  {
+    item: "green beans",
+    price: 2.55,
+    weightInPounds: 2
+  }
+];
+*/
+
+function shoppingSummary(list) {
+  //input - array of obj
+  //output - string
+  var items = 0;
+  var price = 0; 
+  
+  for (var i = 0; i < list.length; i++) {
+      if (price + list[i].price < 100) {
+          items++
+          price+= list[i].price;
+      }
+  }
+  return "I got " + items + " items at $" + price;
+  
+}
