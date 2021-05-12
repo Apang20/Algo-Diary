@@ -21,22 +21,5 @@ function palindrome(str) {
     }
 
 
-    
-    //Find the LONGEST palindrome 
-        // split sentence into words
-        // iterate words and collect the palindromes
-        // sort the list of palindromes by word length
-        // return the largest item in the sorted list
-    function findLongestPalindrome(sentence) {
 
-        let palindromes = [];
-        let words = sentence.split(' ');
-        for (let i = 0; i < words.length; i++) {
-            if (isPalindrome(words[i])) {
-                palindromes.push(words[i]);
-                palindromes.sort(sortAscendingByLength);
-            }
-        }
-        return palindromes.pop();
-        
-      }
+    
