@@ -29,4 +29,17 @@ Example of a flat list in code:
 let flatList = "First line\nSecond Line\nThird Line";
 console.log(flatList);
 
+Psuedocode:  
+-Set flatlist varialbe to empty string
+-Iterate over the array over inventory to get designerObject
+-Iterate over deisngerObject's shoe's property 
+-Set flatlist to designerObjects' name + shoe's name + shoe's price 
+-If both iterations reached maxed length then break out of the iteration
+-Else continue the next iteration on a new line
 */
+
+function renderInventory(inventory) {
+
+
+
+}
