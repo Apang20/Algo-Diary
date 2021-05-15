@@ -19,7 +19,8 @@ let currentInventory = [
 ];
 
 /* 
-PART A
+PART A -
+
 Write a function that will take in this currentInventory array as its argument. 
 Your function should access all the shoes across each designer  
 Return them out in a flat list: 
@@ -62,3 +63,31 @@ function renderInventory(inventory) {
     return flatlist;
 
 }
+
+
+/* 
+PART B - 
+Your function should return the average cost of all shoes per designer in this format:
+
+let expected = {
+  'designers': [
+    {
+      'name': 'Brunello Cucinelli',
+      'averagePrice': 1025
+    },
+    {
+      'name': 'Gucci',
+      'averagePrice': 850
+    }
+  ]
+};
+
+Psuedocode:  
+//input - array of obj
+//output - obj of arr 
+//hp - create result obj with arr, iterate over inventory, create empty obj,
+//get designerName, create function for sum and average for shoes array,
+//push obj to designers arr and return
+*/
+
+function calculateAveragePricePerDesigner(inventory) {}
