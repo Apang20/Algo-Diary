@@ -83,11 +83,11 @@ let expected = {
 };
 
 Psuedocode:  
-//input - array of obj
-//output - obj of arr 
-//hp - create result obj with arr, iterate over inventory, create empty obj,
-//get designerName, create function for sum and average for shoes array,
-//push obj to designers arr and return
+Input - array of obj
+Output - obj of arr 
+HP - create result obj with arr, iterate over inventory, create empty obj,
+get designerName, create function for sum and average for shoes array,
+push obj to designers arr and return
 */
 
 function calculateAveragePricePerDesigner(inventory) {}
