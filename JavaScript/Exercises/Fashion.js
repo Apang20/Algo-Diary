@@ -90,4 +90,35 @@ get designerName, create function for sum and average for shoes array,
 push obj to designers arr and return
 */
 
-function calculateAveragePricePerDesigner(inventory) {}
+function calculateAveragePricePerDesigner(inventory) {
+
+    let averageObj = {
+        designers: []
+    }; 
+    for (let i = 0; i < inventory.length; i++) {
+        let designerObj = inventory[i];
+        let shoesArray = inventory[i].shoes;
+        let averagePriceObj = {
+            name: designerObj.name,
+            averagePrice: averagePrice(shoesArray)
+        };
+        averageObj.designers.push(averagePriceObj);
+    }
+    return averageObj;
+    }
+    
+
+    function sum(shoesArray) {
+        let sum = 0; 
+        for (let j = 0; j < shoesArray.length; j++) {
+            sum += shoesArray[j].price;
+        }
+        return sum;
+    }
+    
+    
+    function averagePrice(shoesArray) {
+        return sum(shoesArray) / shoesArray.length; 
+    }
+
+
