@@ -142,7 +142,46 @@ Output - string
 HP - create flatlist var, iterate over inventory, access shoes array,
 If shoe array name is black, add designer name, shoe name and prc to fl,
 Create isBlack function
-
 */ 
 
+
+function listAllBlackShoes(inventory) {
+
+let flatList = '';
+
+for (let i = 0; i < inventory.length; i++) {
+    let designerObj = inventory[i];
+    
+for (let j = 0; j < designerObj.shoes.length; j++) {
+    if (isBlackShoe(designerObj.shoes[j])) {
+        flatList += designerObj.name + ', ' + designerObj.shoes[j].name + ', ' + designerObj.shoes[j].price;
+        
+        if ((i === inventory.length-1) && (j === designerObj.shoes.length-1)) {
+            break;
+        } else {
+            flatList += '\n';
+        }
+    }
+}
+}
+return flatList;
+}
+
+function isBlackShoe(shoeObj) {
+    if (shoeObj.name.indexOf('black') !== -1) {
+        return true;
+    } else {
+        return false; 
+    }
+}
+
+//ASSERTION
+function assertEqual(actual, expected, testName) {
+    if (actual === expected) {
+        console.log ('passed');
+        } else {
+        console.log('FAILED ' + testName + ' Expected ' + expected + ', but got ' + actual + '.');
+        
+    }  
+}
 
