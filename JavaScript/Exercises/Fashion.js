@@ -116,9 +116,33 @@ function calculateAveragePricePerDesigner(inventory) {
         return sum;
     }
     
-    
+
     function averagePrice(shoesArray) {
         return sum(shoesArray) / shoesArray.length; 
     }
+
+
+/*
+PART C -
+Your task is to find all of the shoes with "black" in the name. 
+Your function should filter these shoes, and return them in a "flat list" 
+similarly to Part A:
+console output:
+Brunello Cucinelli, tasselled black low-top lace-up, 1000
+Gucci, black leather laced sneakers, 900
+
+Observe that a "flat list" refers to a string where each new line
+is separated by the newline symbol. Also note that the "flat list" 
+does not end with a newline symbol. 
+Please write your own unit tests.
+
+Psuedocode: 
+Input - array of obj
+Output - string
+HP - create flatlist var, iterate over inventory, access shoes array,
+If shoe array name is black, add designer name, shoe name and prc to fl,
+Create isBlack function
+
+*/ 
 
 
