@@ -260,3 +260,42 @@ let expectedResult = [
 
 */ 
 
+function allLaceShoes (inventory) {
+    let laceDetails = [];
+    
+    for (let i = 0; i < inventory.length; i++) {
+        var designerObj = inventory[i];
+        
+    for (let j = 0; j < designerObj.shoes.length; j++) {
+        let currentShoe = designerObj.shoes[j];
+        
+        if (hasLace(currentShoe.name)) {
+            let nameWordsArray = currentShoe.name.split(' ');
+            
+            let laceObj = {
+                nameWords: nameWordsArray,
+                targetWordIndex: targetWordIndex(nameWordsArray)
+            };
+            
+            laceDetails.push(laceObj);
+            }
+        }
+    }
+    return laceDetails;
+    }
+
+function hasLace(shoeName) {
+    if (shoeName.indexOf('lace') > - 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function targetWordIndex(nameWordsArray) {
+    for (let k = 0; k < nameWordsArray.length; k++) {
+        if(nameWordsArray[k].name.indexOf('lace') > -1) {
+            return k;
+        }
+    }
+}
