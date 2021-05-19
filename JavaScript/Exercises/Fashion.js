@@ -262,7 +262,7 @@ let expectedResult = [
 
 function allLaceShoes (inventory) {
     let laceDetails = [];
-    
+
     for (let i = 0; i < inventory.length; i++) {
         var designerObj = inventory[i];
         
@@ -299,3 +299,14 @@ function targetWordIndex(nameWordsArray) {
         }
     }
 }
+
+// ASSERTION FUNCTION(S) TO BE USED
+function assertObjectsEqual(actual, expected, testName) {
+    actual = JSON.stringify(actual);
+    expected = JSON.stringify(expected);
+    if (actual === expected) {
+      console.log('passed');
+    } else {
+      console.log('FAILED [' + testName + '] Expected ' + expected + ', but got ' + actual);
+    }
+  }
