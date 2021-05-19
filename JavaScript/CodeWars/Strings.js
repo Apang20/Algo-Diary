@@ -226,6 +226,7 @@ function tallEnoughToRide(group) {
     //result array
     //iterate over the group
     //return result
+    
     let tallPeople = [];
     for (let i = 0; i < group.length; i++) {
         if (group[i].heightInInches >= 48) {

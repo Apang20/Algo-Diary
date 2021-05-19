@@ -151,7 +151,7 @@ let flatList = '';
 
 for (let i = 0; i < inventory.length; i++) {
     let designerObj = inventory[i];
-    
+
 for (let j = 0; j < designerObj.shoes.length; j++) {
     if (isBlackShoe(designerObj.shoes[j])) {
         flatList += designerObj.name + ', ' + designerObj.shoes[j].name + ', ' + designerObj.shoes[j].price;
@@ -205,9 +205,58 @@ const currentInventory = [
   }
 ];
 
-//let actualOutput = listAllBlackShoes(currentInventory);
-//let expectedOutput = 'Brunello Cucinelli, tasselled black low-top lace-up, 1000\nGucci, black leather laced sneakers, 900';
-//assertEqual(actualOutput, expectedOutput, 'should return a flatlist with all of the black shoes within the inventory');
+let actualOutput = listAllBlackShoes(currentInventory);
+let expectedOutput = 'Brunello Cucinelli, tasselled black low-top lace-up, 1000\nGucci, black leather laced sneakers, 900';
+assertEqual(actualOutput, expectedOutput, 'should return a flatlist with all of the black shoes within the inventory');
 
 
+
+/*
+PART D -  
+The task now is to find all the laced shoes, 
+but we are going to render them in a somewhat complex format. 
+Your function should return shoe names that contain "lace" in them, 
+and indicate which word contains "lace". 
+The return value's format should be structured like this:
+
+let expectedResult = [
+  {
+    "nameWords": [
+      "tasselled",
+      "black",
+      "low-top",
+      "lace-up"
+    ],
+    "targetWordIndex": 3
+  },
+  {
+    "nameWords": [
+      "tasselled",
+      "green",
+      "low-top",
+      "lace-up"
+    ],
+    "targetWordIndex": 3
+  },
+  {
+    "nameWords": [
+      "red",
+      "leather",
+      "laced",
+      "sneakers"
+    ],
+    "targetWordIndex": 2
+  },
+  {
+    "nameWords": [
+      "black",
+      "leather",
+      "laced",
+      "sneakers"
+    ],
+    "targetWordIndex": 2
+  }
+];
+
+*/ 
 
