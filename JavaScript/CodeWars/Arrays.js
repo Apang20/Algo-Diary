@@ -212,3 +212,47 @@ function removeMostExpensive(list) {
   return budgetList;
   }
   
+
+  /* 
+  Write a function orderAVegetarianDish which takes in an array 
+  of employee objects, and returns true if at least 1 person is 
+  listed "vegetarian" on their "mealPreferences".
+  Otherwise, your function should return false.
+
+  let staffA = [
+  {
+    name: "Lia",
+    department: "Human Resources",
+    dietaryRestrictions: [],
+    mealPreferences: "no preferences"
+  },
+  {
+    name: "Sebastian",
+    department: "Engineering",
+    dietaryRestrictions: ["dairy free", "gluten free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Ari",
+    department: "Executive",
+    dietaryRestrictions: ["dairy free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Martha",
+    department: "Legal",
+    dietaryRestrictions: ["nut allergies"],
+    mealPreferences: "non-vegetarian"
+  }
+];
+  
+  */
+
+ function orderAVegetarianDish(staff) {
+  for (let i = 0; i < staff.length; i++) {
+      if(staff[i].mealPreferences === "vegetarian") {
+          return true;
+      } 
+  }  
+  return false; 
+}
