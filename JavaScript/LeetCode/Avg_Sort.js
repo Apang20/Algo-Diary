@@ -35,6 +35,23 @@ function sort(array) {
     return array; 
 }
 
+const sort = (array) => {
+    for (let i = 0; i < array.length; i++){
+        let min = array[i];
+        for (let j = i + 1; j < array.length; j++){
+            if (array[j] < min){
+                min = array[j];
+            }
+        }
+        const minIndex = array.indexOf(min);
+        array[minIndex] = array[i];
+        array[i] = min; 
+    }
+    return array; 
+}
+//Big 0 n^2
+
+
 // function verify(i){
 //     console.log(i);
 // }
