@@ -46,27 +46,33 @@ function matrix(n) {
 
   while (startColumn <= endColumn && startRow <= endRow) {
     //Top row
-    for (let i = startColumn; i < endColumn; i++) {
+    for (let i = startColumn; i <= endColumn; i++) {
       results[startRow][i] = counter;
       counter++;
     }
     startRow++;
 
     //Right column
-    for (let i = startRow; i < endRow; i++){
+    for (let i = startRow; i <= endRow; i++) {
       results[i][endColumnn] = counter;
       counter++;
     }
-    endColumn++; 
-  }
+    endColumn--;
 
     //Bottom row
-    for (let i = endColumn; i >= startColumn; i--){
-      results[endRow][i] = counter; 
+    for (let i = endColumn; i >= startColumn; i--) {
+      results[endRow][i] = counter;
       counter++
-  }
-  endRow--;
-}
+    }
+    endRow--;
 
+    //Start column
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter;
+      counter++;
+    }
+    startColumn++;
+  }
+}
 
 
