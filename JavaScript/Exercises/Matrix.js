@@ -45,7 +45,11 @@ let startRow = 0;
 let endRow = n - 1; 
 
 while (startColumn <= endColumn && startRow <= endRow){
-  
+  //Top row
+  for (let i = startColumn; i < endColumn; i++){
+    results[startRow][i] = counter;
+    counter++;
+  }
 }
 }
 
