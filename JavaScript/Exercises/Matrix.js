@@ -32,7 +32,11 @@ loop from start column to end column
 */
 
 function matrix(n) {
+const results = []; 
 
+for (let i = 0; i < n; i++){
+  results.push([]);
+}
 
 }
 
