@@ -73,6 +73,7 @@ function matrix(n) {
     }
     startColumn++;
   }
+  return results; 
 }
 
 
