@@ -8,6 +8,7 @@ countDown(5);
 
 
 
+//Summing array elements
 function sum(elements) {
     if (elements.length === 0) {
         return 0;
@@ -17,6 +18,9 @@ function sum(elements) {
     }
 }
 console.log(sum([1, 2, 3, 4, 5]));
+
+
+
 
 
 
