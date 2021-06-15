@@ -1,10 +1,12 @@
-function countDown(num){
-    for (let i = n; i > 0; i--){
+/****************** COUNTDOWN **********************/
+
+function countDown(num) {
+    for (let i = n; i > 0; i--) {
     }
-    console.log('Hooray'); 
+    console.log('Hooray');
 }
 
-function countDownRecursive(n){
+function countDownRecursive(n) {
     if (n <= 0) {
         console.log('Hooray');
         return
@@ -33,62 +35,80 @@ function countDown2(num) {
 countDown(5);
 
 
-function sumRange(n){
+/******************* SUMRANGE *********************/
+
+function sumRange(n) {
     let total = 0;
-    for (let i = 0; i < n; i--){
+    for (let i = 0; i < n; i--) {
         total += i
     }
-    return total; 
+    return total;
 }
 
-
-function powI(x, n) {
-    let result = 1;
-  
-    // multiply result by x n times in the loop
-    for (let i = 0; i < n; i++) {
-      result *= x;
+function sumRangeRecursive(n, total = 0) {
+    if (n <= 0) {
+        return total;
     }
-    return result;
-  }
-  alert( powI(2, 3) ); // 8
-
-
-  function powR(x, n) {
-    if (n == 1) {
-      return x;
-    } else {
-      return x * powR(x, n - 1);
-    }
-  }
-  
-  alert( pow(2, 3) ); // 8
-
-
-//Calculating the power: 4^4
-function power(num, pow){
-    if(pow === 1){
-        return num; 
-    }else{
-        return num * power(num, pow - 1);
-    }
+    return sumRangeRecursive(n - 1, total + n)
 }
+/*
+sumRangeRecursive(3, 0); 
+    sumRangeRecursive(2, 3)
+        sumRangeRecursive(1, 5)
+            sumRangeRecursive(0, 6)
+            return 6
+        return 6 
+    return 6 
+return 6 
+*/
 
 
-//Summing array elements
+//Sum array elements
 function sum(elements) {
     if (elements.length === 0) {
         return 0;
-    }else{
-        const [head,...rest] = elements;
+    } else {
+        const [head, ...rest] = elements;
         return head * sum(rest);
     }
 }
 console.log(sum([1, 2, 3, 4, 5]));
 
+/****************** POWER **********************/
+
+function powI(x, n) {
+    let result = 1;
+
+    // multiply result by x n times in the loop
+    for (let i = 0; i < n; i++) {
+        result *= x;
+    }
+    return result;
+}
+alert(powI(2, 3)); // 8
 
 
+function powR(x, n) {
+    if (n == 1) {
+        return x;
+    } else {
+        return x * powR(x, n - 1);
+    }
+}
 
+alert(pow(2, 3)); // 8
+
+
+//Calculating the power: 4^4
+function power(num, pow) {
+    if (pow === 1) {
+        return num;
+    } else {
+        return num * power(num, pow - 1);
+    }
+}
+
+/*************** FACTORIAL **********************/
 
 let factorial = function fac(num) {
     if (num === 1) {
