@@ -33,10 +33,46 @@ function countDown2(num) {
 countDown(5);
 
 
+function sumRange(n){
+    let total = 0;
+    for (let i = 0; i < n; i--){
+        total += i
+    }
+    return total; 
+}
 
 
+function powI(x, n) {
+    let result = 1;
+  
+    // multiply result by x n times in the loop
+    for (let i = 0; i < n; i++) {
+      result *= x;
+    }
+    return result;
+  }
+  alert( powI(2, 3) ); // 8
 
 
+  function powR(x, n) {
+    if (n == 1) {
+      return x;
+    } else {
+      return x * powR(x, n - 1);
+    }
+  }
+  
+  alert( pow(2, 3) ); // 8
+
+
+//Calculating the power: 4^4
+function power(num, pow){
+    if(pow === 1){
+        return num; 
+    }else{
+        return num * power(num, pow - 1);
+    }
+}
 
 
 //Summing array elements
@@ -49,17 +85,6 @@ function sum(elements) {
     }
 }
 console.log(sum([1, 2, 3, 4, 5]));
-
-
-
-//Calculating the power: 4^4
-function power(num, pow){
-    if(pow === 1){
-        return num; 
-    }else{
-        return num * power(num, pow - 1);
-    }
-}
 
 
 
