@@ -1,10 +1,41 @@
+function countDown(num){
+    for (let i = n; i > 0; i--){
+    }
+    console.log('Hooray'); 
+}
 
-function countDown(num) {
+function countDownRecursive(n){
+    if (n <= 0) {
+        console.log('Hooray');
+        return
+    }
+    console.log(n);
+    countDownRecursive(n - 1)
+}
+
+/* 
+countDownRecursive(3)
+    countDownRecursive(2)
+        countDownRecursive(1)
+            countDownRecursive(0)
+            return
+        return
+    return
+return
+*/
+
+
+function countDown2(num) {
     if (num > 1) {
         countDown(num - 4);
     }
 }
 countDown(5);
+
+
+
+
+
 
 
 
