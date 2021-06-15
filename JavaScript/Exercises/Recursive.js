@@ -21,6 +21,15 @@ console.log(sum([1, 2, 3, 4, 5]));
 
 
 
+//Calculating the power: 4^4
+function power(num, pow){
+    if(pow === 1){
+        return num; 
+    }else{
+        return num * power(num, pow - 1);
+    }
+}
+
 
 
 
