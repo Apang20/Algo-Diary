@@ -67,6 +67,7 @@ const maxWealth = function (accounts) {
     for (let i = 0; i < accounts.length; i++) {
         let account = accounts[i];
         let currentWealth = 0;
+        
         for (let j = 0; j < account.length; j++) {
             currentWealth += account[j]
         }
