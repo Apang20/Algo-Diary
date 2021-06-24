@@ -7,11 +7,35 @@ vowels('Hi There!') --> 3
 vowels('Why do you ask?') -->vowels('Why?') --> 0 */
 
 
+
+
+
+
+
+
+
 function vowels(str) {
 
     const matches = str.match(/[aeiou]/gi);
     return matches ? matches.length : 0
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*SOLUTION - 2

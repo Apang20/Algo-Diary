@@ -25,6 +25,11 @@ function anagrams(stringA, stringB) {
     
 }
 
+
+
+
+
+
 function buildCharMap(str){
     const charMap = {};
     for (let char of str.replace(/[^\w]/g, '').toLowerCase()){
@@ -32,6 +37,12 @@ function buildCharMap(str){
     }
     return charMap;
 }
+
+
+
+
+
+
 
 //TWO:
 // function anagrams(stringA, stringB) {

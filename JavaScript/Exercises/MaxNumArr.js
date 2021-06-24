@@ -28,7 +28,6 @@ function maxInt(arr){
 	return findLongerKey(generateMap(arr))
 }
 
-
 function maxInt(arr){
 	const numMap = {};
 	let max = 0; 
