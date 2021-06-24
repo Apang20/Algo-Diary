@@ -44,17 +44,36 @@ PSEUDOCODE
 3) return richest account 
 */
 
+
 function maximumWealth(accounts) {
     let maxWealth = 0;
-    let currentWealth = 0; 
+
     for (let i = 0; i < accounts.length; i++) {
-        for (let j = 0; j < accounts.length; j++){
-            currentWealth += accounts[i][j]; 
+        let currentWealth = 0;
+        for (let j = 0; j < accounts.length; j++) {
+            currentWealth += accounts[i][j];
         }
-        if (currentWealth > maxWealth){
+        if (currentWealth > maxWealth) {
             maxWealth = currentWealth;
         }
     }
-    return maxWealth; 
+    return maxWealth;
 };
 
+
+const maxWealth = function (accounts) {
+    let wealthiest = 0;
+
+    for (let i = 0; i < accounts.length; i++) {
+        let account = accounts[i];
+        let currentWealth = 0;
+        for (let j = 0; j < account.length; j++) {
+            currentWealth += account[j]
+        }
+        wealthiest = Math.max(wealthiest, currentWealth);
+    }
+    return wealthiest;
+}
+
+//Time Complexity: 0(n*m)
+//Space Complexity: 0(1) - constant vars/no new arr
