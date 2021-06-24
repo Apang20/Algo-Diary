@@ -35,6 +35,21 @@ function sort(array) {
     return array; 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const sort = (array) => {
     for (let i = 0; i < array.length; i++){
         let min = array[i];
