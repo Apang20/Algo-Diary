@@ -45,20 +45,16 @@ PSEUDOCODE
 */
 
 function maximumWealth(accounts) {
-    let sum = 0;
-    let richestAcct = 0;
-
+    let maxWealth = 0;
+    let currentWealth = 0; 
     for (let i = 0; i < accounts.length; i++) {
-        for (let j = 0; j < accounts[i].length; j++) {
-            sum += accounts[i][j];
-        };
-
-        if (richest <= sum) {
-            richestAcct = sum;
-        };
-
-        sum = 0;
-    };
-    return richestAcct
+        for (let j = 0; j < accounts.length; j++){
+            currentWealth += accounts[i][j]; 
+        }
+        if (currentWealth > maxWealth){
+            maxWealth = currentWealth;
+        }
+    }
+    return maxWealth; 
 };
 
