@@ -3,10 +3,10 @@ OBJECTIVE:
  You are given an m x n integer grid accounts where accounts[i][j] is 
  the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. 
  Return the wealth that the richest customer has.
-
 A customer’s wealth is the amount of money they have in 
 all their bank accounts. 
 The richest customer is the customer that has the maximum wealth.
+
 
 EXAMPLES:
 Input: accounts = [[1,2,3],[3,2,1]]
@@ -26,4 +26,26 @@ Explanation:
 3rd customer has wealth = 8
 The 2nd customer is the richest with a wealth of 10.
 
+Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
+Output: 17
+
 */
+
+function maximumWealth(accounts) {
+    let sum = 0;
+    let wealthiestAcct = 0;
+
+    for (let i = 0; i < accounts.length; i++) {
+        for (let j = 0; j < accounts[i].length; j++) {
+            sum += accounts[i][j];
+        };
+
+        if (wealthiest <= sum) {
+            wealthiestAcct = sum;
+        };
+
+        sum = 0;
+    };
+    return wealthiestAcct
+};
+
