@@ -1,4 +1,6 @@
 /* 
+PROBLEM: #1672 Richest Customer Wealth
+
 OBJECTIVE:
  You are given an m x n integer grid accounts where accounts[i][j] is 
  the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. 
@@ -29,23 +31,34 @@ The 2nd customer is the richest with a wealth of 10.
 Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
 Output: 17
 
+
+PSEUDOCODE
+1) Create sum variable and richest variable
+2) Loop through accounts array 
+    a) create variable to hold curent wealth 
+    b) loop through inner arrays
+        i. add the value of each index to the current wealth
+
+    c) if current account > sum, set them equal to each other 
+
+3) return richest account 
 */
 
 function maximumWealth(accounts) {
     let sum = 0;
-    let wealthiestAcct = 0;
+    let richestAcct = 0;
 
     for (let i = 0; i < accounts.length; i++) {
         for (let j = 0; j < accounts[i].length; j++) {
             sum += accounts[i][j];
         };
 
-        if (wealthiest <= sum) {
-            wealthiestAcct = sum;
+        if (richest <= sum) {
+            richestAcct = sum;
         };
 
         sum = 0;
     };
-    return wealthiestAcct
+    return richestAcct
 };
 
