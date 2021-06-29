@@ -21,3 +21,8 @@ n == nums.length
 -231 <= nums[i] <= 231 - 1
 
 */
+
+let majorityElement = function(nums) {
+    let formula = Math.floor(nums.length/2);
+    let newObj = {}; 
+}
