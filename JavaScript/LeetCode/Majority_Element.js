@@ -32,7 +32,7 @@ PSEUDOCODE
 */
 
 
-let majorityElement = function(nums) {
+var majorityElement = function(nums) {
     let formula = Math.floor(nums.length/2);
     let newObj = {}; 
 
@@ -43,3 +43,9 @@ let majorityElement = function(nums) {
         return value;
     }
 }
+
+// Second Solution - Not mine - visit https://leetcode.com/problems/majority-element/discuss/1146085/javascript-one-liner
+
+var majorityElement = function(nums) {
+    return nums.sort((a, b) => a - b)[Math.floor(nums.length / 2)]
+};
