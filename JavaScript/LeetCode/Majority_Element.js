@@ -20,7 +20,17 @@ n == nums.length
 1 <= n <= 5 * 104
 -231 <= nums[i] <= 231 - 1
 
+
+PSEUDOCODE
+-declare a variable to hold the formula to find majority element
+-declare empty object 
+-iterate through nums array 
+-declare the var value to hold the index of nums 
+-assign value to newObj's key and check if element exists
+-if yes, increment, if not then value = 1
+-conditional statement to check newObj against formula
 */
+
 
 let majorityElement = function(nums) {
     let formula = Math.floor(nums.length/2);
