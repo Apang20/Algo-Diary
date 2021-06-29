@@ -35,4 +35,11 @@ PSEUDOCODE
 let majorityElement = function(nums) {
     let formula = Math.floor(nums.length/2);
     let newObj = {}; 
+
+    for (let i = 0; i < nums.length; i++){
+        let value = nums[i];
+        newObj[value] = newObj[value] + 1 || 1 
+        if (newObj[value] > formula)
+        return value;
+    }
 }
